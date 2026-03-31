@@ -1,0 +1,16 @@
+.gridContainer{
+    display: flex;
+    height:70%;
+    width:45%;
+    flex-wrap: wrap;
+    margin:auto;
+    padding: 50px;
+    align-items: center;
+}
+
+.gridItem{
+    border: 1px solid black;
+    box-sizing: border-box;
+    width: 6.25%;
+    aspect-ratio: 1/1;
+}
