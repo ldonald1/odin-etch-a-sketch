@@ -1,6 +1,7 @@
 #new{
     display:flex;
     margin:auto;
+    margin-bottom: 20px;
 }
 
 .gridContainer{
@@ -17,4 +18,10 @@
     border: 1px solid black;
     box-sizing: border-box;
     aspect-ratio: 1/1;
+}
+
+#choices{
+    display:flex;
+    justify-content: center;
+    margin-top: 20px;
 }

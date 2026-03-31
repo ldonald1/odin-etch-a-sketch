@@ -1,7 +1,9 @@
 let divsArray = [];
+let colorChoice = "";
 
 const divContainer = document.querySelector(".gridContainer");
 const newGrid = document.querySelector("#new");
+const colorChoices = document.querySelector("#choices");
 
 function generateGrid(n){
     for(let i = 0; i < n; i ++){
@@ -21,6 +23,7 @@ function generateGrid(n){
 function removeGrid(){
     divsArray.forEach((e) => e.remove());
     divsArray.length = 0;
+    colorChoice = "";
 };
 
 function randomizeRGB(){
@@ -29,6 +32,7 @@ function randomizeRGB(){
     let rgb3 = Math.floor(Math.random() * 256);
     return `(${rgb1}, ${rgb2}, ${rgb3})`;
 }
+
 
 generateGrid(16);
 
@@ -39,12 +43,18 @@ divContainer.addEventListener("mouseover", (e) => {
         if(chosen.hasChildNodes()){return;}
         
         if(chosen.style.backgroundColor === "white"){
+            if(colorChoice === "random"){
             chosen.style.backgroundColor = `rgb${randomizeRGB()}`;
+            }
+            else{chosen.style.backgroundColor = colorChoice;}
             return;
         }
 
         if(chosen.style.opacity>0){
-        chosen.style.backgroundColor = `rgb${randomizeRGB()}`;    
+        if(colorChoice === "random"){
+        chosen.style.backgroundColor = `rgb${randomizeRGB()}`; 
+        }
+        else{chosen.style.backgroundColor = colorChoice;}   
         chosen.style.opacity-= 0.1
         }
         
@@ -59,5 +69,10 @@ newGrid.addEventListener("click", () => {
     }
     removeGrid();
     generateGrid(input);
+})
+
+colorChoices.addEventListener("click", (e) => {
+    const choice = e.target;
+    colorChoice = choice.textContent.toLowerCase();
 })
 
