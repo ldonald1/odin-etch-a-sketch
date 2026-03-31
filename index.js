@@ -4,6 +4,7 @@ let colorChoice = "";
 const divContainer = document.querySelector(".gridContainer");
 const newGrid = document.querySelector("#new");
 const colorChoices = document.querySelector("#choices");
+const colorPicker = document.querySelector("#colorPicker");
 
 function generateGrid(n){ // generate grid of size n x n
     for(let i = 0; i < n; i ++){
@@ -61,7 +62,7 @@ divContainer.addEventListener("mouseover", (e) => { // color square div when mou
         }
         
         // chosen.style.backgroundColor = "blue";
-    })
+    });
 
 newGrid.addEventListener("click", () => {
     const input = +prompt("How many squares per side do you want for your new grid?");
@@ -74,10 +75,14 @@ newGrid.addEventListener("click", () => {
     }
     removeGrid();
     generateGrid(input);
-})
+});
 
 colorChoices.addEventListener("click", (e) => {
     const choice = e.target;
     colorChoice = choice.textContent.toLowerCase();
-})
+});
 
+
+colorPicker.addEventListener("input", (e) =>{
+    colorChoice = e.target.value;
+})

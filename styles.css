@@ -29,6 +29,8 @@
 #choices{
     display:flex;
     justify-content: center;
+    gap: 5px;
+    align-items: center;
     margin-top: 20px;
 }
 
@@ -48,6 +50,12 @@
     border-radius: 5px;
     padding: 10px;
     aspect-ratio: 1/0.5;
+}
+
+#colors{
+    display: flex;
+    align-items: center;
+    gap: 5px;
 }
 
 body{

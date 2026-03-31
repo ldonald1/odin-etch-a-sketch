@@ -4,11 +4,8 @@ This project is a browser version of something between a sketchpad and an Etch-a
 
 You can clear the grid and generate a new n x n grid by clicking on the 'New Grid' button at the top of the page, and typing your desired value (i.e. 32 if you want a 32 x 32 grid). The value for n can not be a negative number or above 100.
 
-There are buttons located below the grid that allow you to choose from 5 different color options:
-- Red
-- Green
-- Blue
-- Black (default)
+There are buttons located below the grid that allow you to choose from different color options:
+- Color (color picker that allows you to select any custom color)
 - Random (randomizes color with each interaction)
 
 The skills demonstrated in this project include:
