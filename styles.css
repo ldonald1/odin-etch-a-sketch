@@ -10,8 +10,6 @@
     flex-wrap: wrap;
     margin:auto;
     padding: 50px;
-    align-items: center;
-    gap:0;
 }
 
 .gridItem{

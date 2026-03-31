@@ -18,6 +18,7 @@ function generateGrid(n){
 
 function removeGrid(){
     divsArray.forEach((e) => e.remove());
+    divsArray.length = 0;
 };
 
 generateGrid(16);
@@ -36,7 +37,6 @@ newGrid.addEventListener("click", () => {
         return;
     }
     removeGrid();
-    divsArray.length = 0;
     generateGrid(input);
 })
 
