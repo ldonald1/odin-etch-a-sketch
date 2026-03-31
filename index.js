@@ -44,6 +44,7 @@ divContainer.addEventListener("mouseover", (e) => {
         }
 
         if(chosen.style.opacity>0){
+        chosen.style.backgroundColor = `rgb${randomizeRGB()}`;    
         chosen.style.opacity-= 0.1
         }
         
