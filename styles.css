@@ -4,6 +4,11 @@
     margin-bottom: 20px;
 }
 
+#new:hover{
+    cursor: pointer;
+    filter: drop-shadow(3px 3px black);
+}
+
 .gridContainer{
     display: flex;
     height:700px;
@@ -31,6 +36,11 @@
     display: flex;
     justify-content: space-between;
     margin: 10px;
+}
+
+.choice:hover{
+    cursor: pointer;
+    filter: drop-shadow(3px 3px black);
 }
 
 #new, .choice{
