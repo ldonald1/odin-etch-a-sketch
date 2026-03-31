@@ -10,6 +10,8 @@ function generateGrid(n){
         div.id = `div${i}-${j}`;
         div.classList.add("gridItem");
         div.style.width = (100/n)+"%";
+        div.style.backgroundColor = "white";
+        div.style.opacity = 1;
         divsArray.push(div);
         divContainer.appendChild(div);
         }
@@ -21,13 +23,31 @@ function removeGrid(){
     divsArray.length = 0;
 };
 
+function randomizeRGB(){
+    let rgb1 = Math.floor(Math.random() * 256);
+    let rgb2 = Math.floor(Math.random() * 256);
+    let rgb3 = Math.floor(Math.random() * 256);
+    return `(${rgb1}, ${rgb2}, ${rgb3})`;
+}
+
 generateGrid(16);
+
 
 divContainer.addEventListener("mouseover", (e) => {
         const chosen = e.target;
         console.log(chosen);
         if(chosen.hasChildNodes()){return;}
-        chosen.style.backgroundColor = "blue";
+        
+        if(chosen.style.backgroundColor === "white"){
+            chosen.style.backgroundColor = `rgb${randomizeRGB()}`;
+            return;
+        }
+
+        if(chosen.style.opacity>0){
+        chosen.style.opacity-= 0.1
+        }
+        
+        // chosen.style.backgroundColor = "blue";
     })
 
 newGrid.addEventListener("click", () => {

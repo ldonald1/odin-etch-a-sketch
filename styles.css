@@ -9,7 +9,8 @@
     width:700px;
     flex-wrap: wrap;
     margin:auto;
-    padding: 50px;
+    background-color: black;
+
 }
 
 .gridItem{
