@@ -69,6 +69,9 @@ newGrid.addEventListener("click", () => {
         alert("The number can not be negative or above 100.");
         return;
     }
+    else if(input === null || input === "" || input === 0){
+        return;
+    }
     removeGrid();
     generateGrid(input);
 })

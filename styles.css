@@ -25,3 +25,16 @@
     justify-content: center;
     margin-top: 20px;
 }
+
+.choice{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+}
+
+#new, .choice{
+    text-align: center;
+    border-radius: 5px;
+    padding: 10px;
+    aspect-ratio: 1/0.5;
+}
