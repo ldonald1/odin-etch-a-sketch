@@ -17,6 +17,5 @@
 .gridItem{
     border: 1px solid black;
     box-sizing: border-box;
-    width: 6.25%;
     aspect-ratio: 1/1;
 }
