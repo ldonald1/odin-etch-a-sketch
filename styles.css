@@ -1,11 +1,17 @@
+#new{
+    display:flex;
+    margin:auto;
+}
+
 .gridContainer{
     display: flex;
-    height:70%;
-    width:45%;
+    height:700px;
+    width:700px;
     flex-wrap: wrap;
     margin:auto;
     padding: 50px;
     align-items: center;
+    gap:0;
 }
 
 .gridItem{
