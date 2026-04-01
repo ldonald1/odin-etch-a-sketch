@@ -6,7 +6,6 @@
 
 #new{
     display:flex;
-    margin:auto;
     margin-bottom: 20px;
 }
 
@@ -23,6 +22,7 @@
     margin:auto;
     background-color: black;
     border: 2px solid black;
+    margin-bottom: 20px;;
 
 }
 
@@ -33,17 +33,19 @@
 }
 
 #choices{
+    width:700px;
     display:flex;
-    justify-content: center;
-    gap: 5px;
+    justify-content:center;
+    gap: 20px;
     align-items: center;
+    margin:auto;
     margin-top: 20px;
 }
 
 .choice{
     display: flex;
     justify-content: space-between;
-    margin: 10px;
+    margin-bottom: 20px;
 }
 
 .choice:hover{
@@ -62,6 +64,7 @@
     display: flex;
     align-items: center;
     gap: 5px;
+    margin-bottom: 20px;
 }
 
 body{
